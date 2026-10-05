@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_dark_primary">#8FD5AE</color>
+    <color name="md_theme_dark_onPrimary">#003920</color>
+    <color name="md_theme_dark_primaryContainer">#145233</color>
+    <color name="md_theme_dark_onPrimaryContainer">#C4F0D4</color>
+    <color name="md_theme_dark_secondary">#A4D0B5</color>
+    <color name="md_theme_dark_onSecondary">#0E2A1C</color>
+    <color name="md_theme_dark_secondaryContainer">#264837</color>
+    <color name="md_theme_dark_onSecondaryContainer">#C0ECD0</color>
+    <color name="md_theme_dark_tertiary">#8DC8EA</color>
+    <color name="md_theme_dark_background">#0C1510</color>
+    <color name="md_theme_dark_onBackground">#DCE5DD</color>
+    <color name="md_theme_dark_surface">#0C1510</color>
+    <color name="md_theme_dark_onSurface">#DCE5DD</color>
+    <color name="md_theme_dark_surfaceVariant">#414943</color>
+    <color name="md_theme_dark_onSurfaceVariant">#C0C9C1</color>
+    <color name="md_theme_dark_outline">#8B938C</color>
+    <color name="md_theme_dark_surfaceContainer">#15201A</color>
+    <color name="md_theme_dark_surfaceContainerHigh">#1C2A22</color>
+    <color name="card_surface">#1C2A22</color>
+</resources>

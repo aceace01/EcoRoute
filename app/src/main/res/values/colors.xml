@@ -2,4 +2,24 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="md_theme_light_primary">#1B6B43</color>
+    <color name="md_theme_light_onPrimary">#FFFFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#C4F0D4</color>
+    <color name="md_theme_light_onPrimaryContainer">#052814</color>
+    <color name="md_theme_light_secondary">#3E6651</color>
+    <color name="md_theme_light_onSecondary">#FFFFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#C0ECD0</color>
+    <color name="md_theme_light_onSecondaryContainer">#1A3326</color>
+    <color name="md_theme_light_tertiary">#2E6A8A</color>
+    <color name="md_theme_light_background">#F4FBF6</color>
+    <color name="md_theme_light_onBackground">#121C16</color>
+    <color name="md_theme_light_surface">#F4FBF6</color>
+    <color name="md_theme_light_onSurface">#121C16</color>
+    <color name="md_theme_light_surfaceVariant">#DCE5DD</color>
+    <color name="md_theme_light_onSurfaceVariant">#414943</color>
+    <color name="md_theme_light_outline">#717973</color>
+    <color name="md_theme_light_surfaceContainer">#E8F3EB</color>
+    <color name="md_theme_light_surfaceContainerHigh">#FFFFFF</color>
+    <color name="card_surface">#FFFFFF</color>
 </resources>
