@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         btnCalculate = findViewById(R.id.btnCalculate)
         btnReset = findViewById(R.id.btnReset)
         tvResult = findViewById(R.id.tvResult)
+        tvResult.movementMethod = null
 
         btnCalculate.setOnClickListener { calculateCarbon() }
         btnReset.setOnClickListener { resetForm() }
@@ -50,20 +51,20 @@ class MainActivity : AppCompatActivity() {
 
         if (distanceInput.isEmpty()) {
             etDistance.error = "Please enter a distance"
-            tvResult.text = ""
+            setResultText("")
             return
         }
 
         val distance = distanceInput.toDoubleOrNull()
         if (distance == null) {
             etDistance.error = "Enter a valid number"
-            tvResult.text = ""
+            setResultText("")
             return
         }
 
         if (distance <= 0) {
             etDistance.error = "Distance must be greater than 0"
-            tvResult.text = ""
+            setResultText("")
             return
         }
 
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             modeName, emissions, saved
         )
 
-        tvResult.text = result
+        setResultText(result)
         getAiTip("I traveled $distance km by $modeName. Give one short tip to reduce my carbon emissions. Use simple English, maximum 2 sentences.")
     }
 
@@ -104,13 +105,18 @@ class MainActivity : AppCompatActivity() {
         etDistance.text.clear()
         etDistance.error = null
         rgTransportMode.clearCheck()
-        tvResult.text = ""
+        setResultText("")
+    }
+
+    private fun setResultText(text: String) {
+        tvResult.text = text
+        tvResult.requestLayout()
     }
 
     private fun getAiTip(prompt: String) {
         // Remember the calculator result so the tip can be added under it
         val baseResult = tvResult.text.toString()
-        tvResult.text = "$baseResult\n\nGetting AI tip..."
+        setResultText("$baseResult\n\nGetting AI tip...")
 
         Thread {
             try {
@@ -139,7 +145,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (code !in 200..299) {
                     runOnUiThread {
-                        tvResult.text = "$baseResult\n\nAI tip failed ($code): $response"
+                        setResultText("$baseResult\n\nAI tip failed ($code): $response")
                     }
                     return@Thread
                 }
@@ -150,11 +156,12 @@ class MainActivity : AppCompatActivity() {
                     .getJSONObject("message")
                     .getString("content")
 
-                runOnUiThread { tvResult.text = "$baseResult\n\nTip: $answer" }
+                runOnUiThread { setResultText("$baseResult\n\nTip: $answer") }
             } catch (e: Exception) {
                 runOnUiThread {
-                    tvResult.text =
+                    setResultText(
                         "$baseResult\n\nAI tip failed: ${e.javaClass.simpleName} ${e.message}"
+                    )
                 }
             }
         }.start()
