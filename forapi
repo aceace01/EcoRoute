@@ -1,0 +1,1 @@
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" reverse tcp:31415 tcp:31415
