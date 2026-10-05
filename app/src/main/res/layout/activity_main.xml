@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="400dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/app_name"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="@string/app_subtitle"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/label_distance" />
+
+            <EditText
+                android:id="@+id/etDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/hint_distance"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="@string/label_transport" />
+
+            <RadioGroup
+                android:id="@+id/rgTransportMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbWalkBike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mode_walk_bike" />
+
+                <RadioButton
+                    android:id="@+id/rbMotorcycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mode_motorcycle" />
+
+                <RadioButton
+                    android:id="@+id/rbJeepneyBus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mode_jeepney_bus" />
+
+                <RadioButton
+                    android:id="@+id/rbCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mode_car" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCalculate"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_calculate" />
+
+                <Button
+                    android:id="@+id/btnReset"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_reset" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F7F0"
+                android:padding="16dp"
+                android:textColor="#1B1B1B"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EcoRoute</string>
+    <string name="app_subtitle">Carbon Commute Calculator</string>
+    <string name="label_distance">Distance traveled (km)</string>
+    <string name="hint_distance">e.g. 5.5</string>
+    <string name="label_transport">Transport mode</string>
+    <string name="mode_walk_bike">Walk / Bike</string>
+    <string name="mode_motorcycle">Motorcycle</string>
+    <string name="mode_jeepney_bus">Jeepney / Bus</string>
+    <string name="mode_car">Car</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="btn_reset">Reset</string>
+</resources>
